@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input type="text" name="name" placeholder="请输入你的名字" />
+        <input type="file" id="file" name="imgFile">
+    </form>
+    <button>提交</button>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+    </script>
+    <script>
+        document.getElementsByTagName('button')[0].onclick = () => {
+            var formdata = new FormData($('#myForm')[0]);
+            // 上传到服务器的字段名称
+            // formdata.append("imgFile", $('#file')[0].files[0]);
+            console.log(formdata);
+            $.ajax({
+                url: 'http://api.ztwlxx.club/user/app/create',
+                type: 'POST',
+                cache: false,
+                data: formdata,
+                timeout: 5000,
+                //必须false才会避开jQuery对 formdata 的默认处理 
+                // XMLHttpRequest会对 formdata 进行正确的处理
+                processData: false,
+                //必须false才会自动加上正确的Content-Type 
+                contentType: false,
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function(data) {
+
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            })
+        }
+
+        // $('button')[0].onclick = () => {
+        //     $.ajax({
+        //         url: self.url,
+        //         type: 'POST',
+        //         cache: false,
+        //         data: formdata,
+        //         timeout: 5000,
+        //         //必须false才会避开jQuery对 formdata 的默认处理 
+        //         // XMLHttpRequest会对 formdata 进行正确的处理
+        //         processData: false,
+        //         //必须false才会自动加上正确的Content-Type 
+        //         contentType: false,
+        //         xhrFields: {
+        //             withCredentials: true
+        //         },
+        //         success: function(data) {
+
+        //         },
+        //         error: function(XMLHttpRequest, textStatus, errorThrown) {
+
+        //         }
+        //     })
+        // }
+    </script>
+</body>
+
+</html>
