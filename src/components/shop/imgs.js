@@ -1,0 +1,1 @@
+import defaultImg from '../../assets/images/shop/showlunbo1.png'

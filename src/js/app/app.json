@@ -1,0 +1,633 @@
+{
+    "initJSON": {
+        "text": {
+            "type": 1,
+            "id": "",
+            "event": {
+                "name": "none",
+                "param": {
+                    "herf": "",
+                    "phoneNumber": "",
+                    "title": "",
+                    "desc": "",
+                    "iconSharesCss": "sharesClass"
+                }
+            },
+            "content": "你要编辑的文字",
+            "position": {
+                "top": 0,
+                "left": 10
+            },
+            "width": 200,
+            "height": 30,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 20,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)",
+                "zIndex": 1
+            }
+        },
+        "img": {
+            "type": 2,
+            "id": "",
+            "event": {
+                "name": "none",
+                "param": {
+                    "herf": "",
+                    "text": "",
+                    "phoneNumber": "",
+                    "title": "",
+                    "desc": ""
+                }
+            },
+            "images": "",
+            "position": {
+                "top": 0,
+                "left": 10
+            },
+            "width": 175,
+            "height": 174,
+            "css": {
+                "backgroundColor": "rgba(0,0,0,0)",
+                "opacity": 100,
+                "padding": 0,
+                "rotate": 0,
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "ico": {
+            "type": 3,
+            "id": "",
+            "event": {
+                "name": "none",
+                "param": {
+                    "herf": "",
+                    "text": "",
+                    "phoneNumber": "",
+                    "title": "",
+                    "desc": "",
+                    "iconSharesCss": "sharesClass"
+                }
+            },
+            "content": "el-icon-edit",
+            "iconSize": 50,
+            "iconColor": "#000000",
+            "iconType": "el-icon-edit",
+            "position": {
+                "top": 30,
+                "left": 80
+            },
+            "width": 30,
+            "height": 30,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(0, 0, 0,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 24,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "map": {
+            "type": 4,
+            "mapId": "1",
+            "location": {
+                "x": 0,
+                "y": 0
+            },
+            "position": {
+                "top": 0,
+                "left": 10
+            },
+            "width": 200,
+            "height": 200,
+            "css": {
+                "backgroundColor": "rgba(0,0,0,0)",
+                "opacity": 100,
+                "padding": 0,
+                "rotate": 0,
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "slider": {
+            "type": 5,
+            "id": "",
+            "imgUrls": [{
+                    "id": "1",
+                    "event": {
+                        "name": "none",
+                        "param": {
+                            "herf": "",
+                            "text": "",
+                            "phoneNumber": "",
+                            "title": "",
+                            "desc": "",
+                            "iconSharesCss": "sharesClass"
+                        }
+                    },
+                    "img": "https://image-c.weimobwmc.com/saas-wxbiz/4c9e6ccd08b94ce2b62a2b945bf57d93.png"
+                },
+                {
+                    "id": "2",
+                    "event": {
+                        "name": "none",
+                        "param": {
+                            "herf": "",
+                            "text": "分享",
+                            "phoneNumber": "",
+                            "title": "棒棒的",
+                            "desc": "厉害了",
+                            "iconSharesCss": "sharesClass"
+                        }
+                    },
+                    "img": "https://image-c.weimobwmc.com/saas-wxbiz/4c9e6ccd08b94ce2b62a2b945bf57d93.png"
+                },
+                {
+                    "id": "3",
+                    "event": {
+                        "name": "none",
+                        "param": {
+                            "herf": "",
+                            "text": "分享",
+                            "phoneNumber": "",
+                            "title": "棒棒的",
+                            "desc": "厉害了",
+                            "iconSharesCss": "sharesClass"
+                        }
+                    },
+                    "img": "https://image-c.weimobwmc.com/saas-wxbiz/4c9e6ccd08b94ce2b62a2b945bf57d93.png"
+                }
+            ],
+            "indicatorDots": true,
+            "autoplay": true,
+            "interval": 5000,
+            "duration": 1000,
+            "active": "#f00",
+            "pointColor": "#fff",
+            "position": {
+                "top": 100,
+                "left": 0
+            },
+            "width": 375,
+            "height": 200,
+            "css": {
+                "backgroundColor": "rgba(0,0,0,0)",
+                "padding": 0,
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "button": {
+            "type": 6,
+            "event": {
+                "name": "none",
+                "param": {
+
+                }
+            },
+            "content": "提交",
+            "event": {
+                "name": "none",
+                "param": {
+
+                }
+            },
+            "position": {
+                "top": 400,
+                "left": 130
+            },
+            "width": 100,
+            "height": 30,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "textarea": {
+            "type": 7,
+            "event": {
+                "name": "none",
+                "param": {
+
+                }
+            }
+        },
+        "video": {
+            "type": 9,
+            "id": "",
+            "videoUrl": "",
+            "autoplay": "false",
+            "imgUrl": "",
+            "loop": "false",
+            "position": {
+                "top": 0,
+                "left": 0
+            },
+            "width": 375,
+            "height": 200,
+            "css": {
+                "backgroundColor": "rgba(255,255,0,0)",
+                "padding": 0,
+                "rotate": 0,
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "navbar": {
+            "type": 8,
+            "event": {
+                "name": "none",
+                "param": {
+
+                }
+            },
+            "nav_btn": [{
+                "btn_icon": "\\E902",
+                "value": "kjdsl;"
+            }, {
+                "btn_icon": "\\E902",
+                "value": "kjdsl;"
+            }, {
+                "btn_icon": "\\E902",
+                "value": "kjdsl;"
+            }],
+            "position": {
+                "left": 0
+            },
+            "width": 375,
+            "height": 50,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "poi": {
+            "type": "threeLinkage",
+            "id": "",
+            "content": "请选择",
+            "position": {
+                "top": 50,
+                "left": 0
+            },
+            "threeLinkages": [{
+                "threeLinkage": "region",
+                "region": [
+                    "广东省",
+                    "广州市",
+                    "海珠区"
+                ]
+            }],
+            "width": 375,
+            "height": 30,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": "",
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "none",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)",
+                "zIndex": 1
+            }
+        },
+        "date": {
+            "type": "date",
+            "name": "date",
+            "content": "请选择",
+            "title": "年月日三联动",
+            "dates": [{
+                "date": "date",
+                "dat": "2018-02-15"
+            }],
+            "width": 370,
+            "height": 40,
+            "position": {
+                "top": 400,
+                "left": 15
+            },
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "none",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)",
+                "zIndex": 1
+            }
+        },
+        "phone": {
+            "type": "phone",
+            "name": "phone",
+            "title": "电话",
+            "bind": "name",
+            "content": "请输入电话号",
+            "width": 300,
+            "height": 50,
+            "position": {
+                "top": 80,
+                "left": 10
+            },
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": 1,
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)",
+                "zIndex": 1
+            }
+        },
+        "mail": {
+            "type": "mail",
+            "title": "邮箱",
+            "bind": "name",
+            "content": "请输入邮箱号",
+            "width": 300,
+            "height": 50,
+            "position": {
+                "top": 140,
+                "left": 10
+            },
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "select": {
+            "type": "select",
+            "name": "select",
+            "id": "",
+            "title": "单选",
+            "content": "请选择",
+            "objArray": [{
+                "array": ["选项一", "选项二"],
+                "value": "0"
+            }],
+            "position": {
+                "top": 300,
+                "left": 0
+            },
+            "width": 375,
+            "height": 30,
+            "css": {
+                "backgroundColor": "rgba(255,255,255,0)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)"
+            }
+        },
+        "name": {
+            "type": "text",
+            "name": "text",
+            "title": "姓名",
+            "bind": "name",
+            "content": "请输入正确的身份证号",
+            "width": 300,
+            "height": 50,
+            "position": {
+                "top": 30,
+                "left": 10
+            },
+            "css": {
+                "backgroundColor": "rgba(255,255,255,1)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": 0,
+                "lineHeight": 1,
+                "fontFamily": "",
+                "fontSize": 24,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": 0,
+                "borderRadius": 0,
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "solid",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": 0,
+                "shadowRadius": 10,
+                "shadowDire": 0,
+                "transform": "rotate(0deg)",
+                "zIndex": 1
+            }
+        },
+        "btn": {
+            "type": "submit",
+            "content": "提交",
+            "typeId": "1",
+            "position": {
+                "top": 500,
+                "left": 10
+            },
+            "width": "300",
+            "height": "80",
+            "css": {
+                "backgroundColor": "rgba(255,255,255,1)",
+                "color": "rgba(51, 51, 51,1)",
+                "opacity": 100,
+                "margin": "",
+                "lineHeight": "",
+                "fontFamily": "",
+                "fontSize": 12,
+                "writingMode": "horizontal-tb",
+                "textAlign": "left",
+                "fontWeight": "normal",
+                "fontStyle": "normal",
+                "textDecoration": "none",
+                "borderWidth": "",
+                "borderRadius": "",
+                "borderColor": "rgba(204, 204, 204,1)",
+                "borderStyle": "",
+                "shadowColor": "rgba(204, 204, 204,1)",
+                "shadowWidth": "",
+                "shadowRadius": "",
+                "shadowDire": "",
+                "transform": "rotate(0deg)",
+                "zIndex": 20
+            }
+        }
+    }
+}

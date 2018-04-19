@@ -4,16 +4,21 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-
 
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    vendor: [
+      "vue",
+      "vue-router",
+      'vuex',
+      'axios'
+    ],
   },
   output: {
     path: config.build.assetsRoot,
@@ -27,6 +32,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'utils': resolve('src/utils')
     }
   },
   module: {

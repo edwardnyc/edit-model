@@ -1,0 +1,84 @@
+{
+    "id": "", //Id
+    "share_title": "", //分享标题
+    "share_desc": "", //分享描述
+    "share_cover": "", //分享图片
+    "page_height": "", //页面高度
+    "page_back": { //页面背景
+        "type": "", //  0 无  1 颜色  2图片
+        "background_color": "", //背景颜色
+        "background_image": "" //背景图片
+    },
+    "suspension": { //悬浮按钮
+        "type": "", //悬浮开关    1开  2关
+        "location_x": "", // X轴距离
+        "location_y": "", // X轴距离
+        "width": "", // 宽度
+        "height": "", // 高度
+        "jump_type": "7" //分享好友和朋友圈
+    },
+    "assembly": [ //组件
+        {
+            "type": "1", // 1 文字  2 图片 3 图标 4 视频  5 幻灯片 6 地图 7 表单
+            "basics": { //  组件常规设置
+                "location_x": "", // X轴距离
+                "location_y": "", // X轴距离
+                "align_num": "", // 置左 居中 置右 这里不能使用float  所以这里的值为实际位移的PX
+                "width": "", //宽带
+                "height": "", //高度
+                "is_suspension": "", //是否悬浮  1是  2否
+
+                "back_color": "", //背景颜色
+                "text_color": "", //文字颜色
+                "rotate": "", //旋转度数
+                "opacity": "", //透明度数
+                "padding_top": "", //边距
+
+                "text": { //文字组件
+                    "content": "", //内容
+                    "font_family": "", //字体
+                    "font_size": "", //字体大小
+                    "text_align": "", //段落样式
+                    "font_weight": "", //字体加粗
+                    "line_height": "", //行高
+                    "underline": "", //下划线
+                    "letter-spacing": "" //字体间距
+                },
+
+                "video": { //视频组件的部分属性
+                    "url": "", //视频连接
+                    "cover": "", //视频封面图片
+                    "is_auto_play": "", //是否自动播放  1是  2否
+                    "is_loop": "" //是否循环播放  1是  2否
+                },
+                "banner": { //幻灯片
+                    "list": [], //幻灯片图片数组
+                    "point_color": "", //幻灯片指示点的颜色
+                    "point_sel_color": "", //幻灯片指示点选中的颜色
+                    "freeze_time": "", //定格时间
+                    "excessive_time": "" //过度时间
+                },
+                "jump": { //跳转
+                    "type": "1", // 1 无  2页面  3电话  4地址  5分享给好友  6分享朋友圈  7分享好友和朋友圈  8微客服
+                    "is_blank": "", //是否新窗口打开  1 是  2否
+                    "jump_url": "", //页面跳转地址
+                    "mobile": "", //电话
+                    "address": { //地址
+                        "province": "",
+                        "city": "",
+                        "area": "",
+                        "address": "" //详细地址
+                    }
+                },
+
+                "border": { //边框样式
+                    "border_color": "", //边框颜色
+                    "border_height": "", //边框宽带
+                    "border_style": "", //边框样式   dotted 点线 solid实线  double双线  dashed虚线
+                    "border_radius": "" //边框圆角度数
+                }
+            }
+        }
+    ],
+    "parent_id": "" //父页面ID
+}

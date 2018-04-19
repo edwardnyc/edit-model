@@ -1,0 +1,235 @@
+@import  "./_baseFunction";
+
+.header{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.header-mobile{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.2);
+  .logo{
+    float: left;
+    img{
+      height: 32px;
+      vertical-align: middle;
+    }
+  }
+  .breaks{
+    width: 62px;
+    height: 42px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    span{
+      width: 28px;
+      height: 2px;
+      background: $blueColor;
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      display: block;
+      border-radius: 1px;
+      transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      &:nth-child(2){
+        top: 18px;
+      }
+      &:nth-child(3){
+        top: 28px;
+      }
+    }
+  }
+  .menu{
+    position: absolute;
+    top: 142px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 42px);
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    .menu-wrap{
+      background: #fff;
+    }
+    .nav{
+      li{
+        border: 1px solid #f2f2f2;
+      }
+      a{
+        display: block;
+        padding: 0 15px;
+        color: $minColor;
+        height: 40px;
+        line-height: 40px;
+      }
+      .active{
+        background: $blueColor;
+        color: #fff;
+      }
+    }
+    .form{
+      padding: 10px 15px;
+      a{
+        display: inline-block;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 4px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .logon-btn{
+        background: $blueColor;
+        color: #fff;
+        &:hover{
+          background: $dblueColor;
+        }
+      }
+      .register-btn{
+        margin-left: 20px;
+        border: 1px solid $blueColor;
+        color: $blueColor;
+        &:hover{
+          border-color: $dblueColor;
+          color: $dblueColor;
+        }
+      }
+    }
+  }
+  &.header-mobile-active{
+    .breaks{
+      background: $blueColor;
+      span{
+        &:nth-child(1){
+          -webkit-transform: rotate(45deg);
+          top: 21px;
+          background: #fff;
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          -webkit-transform: rotate(-45deg);
+          top: 21px;
+          background: #fff;
+        }
+      }
+    }
+    .menu{
+      top: 42px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.header-pc{
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .logo{
+    float: left;
+    img{
+      height: 100px;
+    }
+  }
+  .nav{
+    float: left;
+    padding: 30px 0 20px;
+    margin-left: 20px;
+    li{
+      float: left;
+      line-height: 50px;
+      width: 120px;
+      text-align: center;
+      &:hover{
+        a{
+          color: $blueColor;
+          &:after{
+            width: 100%;
+          }
+        }
+      }
+    }
+    a{
+      display: inline-block;
+      transition: all 0.3s;
+      position: relative;
+      font-size:20px;
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 8px;
+        width: 0;
+        height: 2px;
+        background: $blueColor;
+      }
+    }
+    .active{
+      color: $blueColor;
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+  .form{
+    float: right;
+    padding-top: 26px;
+    a{
+      display: inline-block;
+      width: 130px;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 6px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .logon-btn{
+      background: $blueColor;
+      color: #fff;
+      &:hover{
+        background: $dblueColor;
+      }
+    }
+    .register-btn{
+      margin-left: 20px;
+      border: 1px solid $blueColor;
+      color: $blueColor;
+      &:hover{
+        border-color: $dblueColor;
+        color: $dblueColor;
+      }
+    }
+  }
+}
+
+
+@media (max-width:1199px){
+  .header{
+    width: 100%; 
+    position: relative;
+    z-index: 100;
+    height: 42px;
+  }
+  .header-pc{
+    display: none;
+  }
+  .header-mobile{
+    display: block;
+    
+  }
+}

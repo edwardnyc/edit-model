@@ -1,0 +1,21 @@
+@charset "UTF-8";
+// @function chang($px, $base-font-size: 75px) {
+//   @each $browser in -webkit-,-moz-,-ms-,-o-{
+//     display: #{$browser}flex;
+//     #{$browser}flex-wrap:wrap;
+//   }
+// }
+
+$baseColor: #36393b;
+$minColor: #696565;
+$fdColor: #fdfdfe;
+$blueColor: #52a2f4;
+$dblueColor: #108fe5;
+$bgblueColor: #222430;
+$redColor: #c93838;
+$orangeColor: #fdae69;
+
+$font14: 14px;
+$font16: 16px;
+$font18: 18px;
+$font36: 36px;

@@ -1,0 +1,249 @@
+@import  "./_baseFunction";
+
+.about{
+  .btn{
+    width: 180px;
+    padding: 10px 0;
+    text-align: center;
+    background: #fff;
+    color: $blueColor;
+    border: 1px solid $blueColor;
+  }
+}
+.num-box{
+  background: #fafbff;
+  padding: 1px 0 20px;
+  ul{
+    padding: 20px 0;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+  h5{
+    font-size: 40px;
+    color: $blueColor;
+  }
+  p{
+    color: $minColor;
+    margin-top: 20px;
+  }
+  .num-btn{
+    margin: 20px auto;
+  }
+}
+.member-box{
+  ul{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+  li{
+    width: 200px;
+    height: 350px;
+    float: left;
+    margin-left: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 60px 20px 0;
+    border: 2px solid #a0a0a0;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:hover{
+      box-shadow: 2px 2px 2px 2px rgba(105, 11, 11, 0.1);
+      transform: translateY(-5px);
+      -webkit-transform: translateY(-5px);
+      border-color: $blueColor;
+    }
+  }
+  .member-line{
+    border: 1px dashed $blueColor;
+    padding: 10px 0;
+    color: #696565;
+    margin-bottom: 40px;
+    h5{
+      font-size: 26px;
+    }
+    h6{
+      margin-top: 5px;
+    }
+  }
+  p{
+    color: #696565;
+    margin-bottom: 20px;
+  }
+}
+.address-box{
+  padding: 40px 0;
+  background: #f2f2f2;
+  .address-wrap{
+    width: 1200px; 
+    margin: 0 auto;
+    padding: 1px 0;
+  }
+  .part-one{
+    color: #696565;
+    h1{
+      font-size: 28px;
+    }
+    p{
+      margin-top: 20px;
+    }
+    h6{
+      font-size: 30px;
+      color: $blueColor;
+      margin-top: 10px;
+    }
+  }
+  .part-two{
+    margin-left: 60px;
+    padding: 10px 0 10px 60px;
+    margin-top: 50px;
+    border-left: 2px solid #dcdcdc;
+    p{
+      line-height: 40px;
+    }
+    .server-btn{
+      margin-top: 20px;
+      background: none;
+    }
+  }
+  .part-three{
+    width: 500px;
+    height: 240px;
+    .bm-view{
+      height: 240px;
+    }
+  }
+}
+@media (max-width:1199px){
+  .about{
+    .btn{
+      width: 100px;
+      padding: 8px 0;
+    }
+  }
+  .num-box{
+    padding: 1px 0 10px;
+    ul{
+      padding: 20px 0;
+      width: 100%;
+    }
+    h5{
+      font-size: 18px;
+    }
+    p{
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    .num-btn{
+      margin: 20px auto;
+    }
+  }
+
+  .member-box{
+    ul{
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 40px;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+    li{
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      margin-left: 0;
+      padding: 10px;
+      border-width: 1px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+    .member-line{
+      width: 40%;
+      float: left;
+      padding: 10px 0;
+      box-sizing: border-box;
+      height: 66px;
+      overflow: hidden;
+      margin-bottom: 0px;
+      overflow: hidden;
+      h5{
+        font-size: 16px;
+      }
+      h6{
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    }
+    .member-text{
+      float: left;
+      width: 60%;
+      box-sizing: border-box;
+      p{
+        margin-bottom: 0px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .text-opacity{
+        opacity: 0;
+        line-height: 1;
+        font-size: 10px;
+      }
+    }
+  }
+  
+  .address-box{
+    padding: 30px 0;
+    .address-wrap{
+      width: 100%;
+      padding: 1px 0;
+    }
+    .part-one{
+      padding-left: 8px;
+      h1{
+        font-size: 14px;
+      }
+      p{
+        margin-top: 10px;
+        font-size: 12px;
+      }
+      h6{
+        font-size: 14px;
+        color: $blueColor;
+        margin-top: 10px;
+      }
+    }
+    .part-two{
+      margin-left: 5px;
+      padding: 10px 0 10px 5px;
+      margin-top: 20px;
+      border-left: 1px solid #dcdcdc;
+      p{
+        line-height: 30px;
+        font-size: 12px;
+      }
+      .server-btn{
+        margin-top: 20px;
+        background: none;
+      }
+    }
+    .part-three{
+      clear: both;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+}

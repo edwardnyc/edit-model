@@ -1,0 +1,255 @@
+@import  "./_baseFunction";
+
+.support-swiper{
+  width: 1200px;
+  margin: 0 auto;
+  // padding-top: 50px;
+  .swiper-container{
+    height: 240px;
+    padding-bottom: 40px;
+  }
+  .swiper-slide{
+    text-align: center;
+    &.swiper-slide-active{
+      .slide-img{
+        height: 200px;
+        line-height: 200px;
+      }
+      img{
+        width: 140px;
+      }
+      .slide-text{
+        opacity: 1;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  .slide-img{
+    height: 240px;
+    line-height: 240px;
+    img{
+      vertical-align: middle;
+      width: 80px;
+    }
+  }
+  .slide-text{
+    opacity: 0;
+    height: 0;
+  }
+}
+.threeimg{
+  width: 1200px;
+  margin: 0 auto;
+  img{
+    width: 100%;
+  }
+}
+.vedio-box{
+  position: relative;
+  .vedio-bg{
+    width: 100%;
+  }
+  .vedio-wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: box;
+    box-align: center;
+    box-pack: center;
+    img{ display: block; }
+  }
+}
+.industry-box{
+  width: 100%;
+  padding: 60px 0 120px;
+  background: #fafbff;
+  .title{
+    color: $minColor;
+    text-align: center;
+    font-size: 24px;
+  }
+  .box{
+    width: 1200px;
+    margin: 60px auto 0;
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    li{
+      width: 196px;
+      height: 352px;
+      float: left;
+      text-align: center;
+      background-size: 100% 100%;
+      &:nth-of-type(1){
+          background-image: url('../../assets/images/league/industry-bg1.png');
+        }
+        &:nth-of-type(2){
+          background-image: url('../../assets/images/league/industry-bg2.png');
+        }
+        &:nth-of-type(3){
+          background-image: url('../../assets/images/league/industry-bg3.png');
+        }
+        &:nth-of-type(4){
+          background-image: url('../../assets/images/league/industry-bg4.png');
+        }
+        &:nth-of-type(5){
+          background-image: url('../../assets/images/league/industry-bg5.png');
+        }
+      &:hover{
+        .box-wrap{
+          opacity: 0;
+        }
+      }
+    }
+    .margin-left{
+      margin-left: 54px;
+    }
+    .box-wrap{
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.6);
+      box-sizing: border-box;
+      padding-top: 120px;
+      color: #fff;
+      line-height: 50px;
+    }
+  }
+}
+.map-box{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .map-lf{
+    width: 622px;
+    padding-top: 30px;
+    h5{
+      color: $minColor;
+      font-size: 28px;
+      margin-left: 20px;
+      line-height: 110px;
+    }
+    h6{
+      font-size: 34px;
+      color: $blueColor;
+      padding: 10px 20px;
+    }
+    .text{
+      color: $minColor;
+      line-height: 30px;
+    }
+  }
+  .network{
+    color: $minColor;
+    margin-left: 20px;
+    padding-top: 30px;
+    h1{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  .map-rt{
+    padding-right: 80px;
+    img{
+      height: 300px;
+    }
+  }
+}
+@media (max-width:1199px){
+  .support-swiper{
+    width: 100%;
+    .swiper-button-next, .swiper-button-prev{
+      width: 15px;
+      height: 24px;
+      margin-top: -12px;
+      background-size: 15px 24px;
+    }
+    .swiper-container{
+      height: 160px;
+      padding-bottom: 30px;
+    }
+    .swiper-slide{
+      &.swiper-slide-active{
+        .slide-img{
+          height: 120px;
+          line-height: 120px;
+        }
+        img{
+          width: 80%;
+        }
+        .slide-text{
+          opacity: 1;
+          height: 30px;
+          padding: 5px 0;
+          line-height: 1.1;
+        }
+      }
+    }
+    .slide-img{
+      height: 160px;
+      line-height: 160px;
+      img{
+        vertical-align: middle;
+        width: 50%;
+      }
+    }
+  }
+  .threeimg{
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .map-box{
+    display: none;
+  }
+  .vedio-box{
+    .vedio-wrap{
+      img{
+        width: 10%;
+      }
+    }
+  }
+  .industry-box{
+    padding: 40px 0 40px;
+    .title{
+      font-size: 18px;
+    }
+    .box{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 5px;
+      margin-top: 40px;
+      li{
+        width: 19%;
+        height: 120px;
+        margin-bottom: 20px;
+      }
+      .margin-left{
+        margin-left: 1%;
+      }
+      .box-wrap{
+        padding-top: 30px;
+        color: #fff;
+        line-height: 30px;
+        img{
+          height: 40px;
+        }
+      }
+    }
+  }
+}

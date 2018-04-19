@@ -1,0 +1,291 @@
+@import  "./_baseFunction";
+
+.investment{
+  .title{
+    text-align: center;
+    color: $minColor;
+    font-size: 18px;
+    span{
+      color: $redColor;
+      font-weight: bold;
+    }
+  }
+}
+.college-box{
+  text-align: center;
+  background: #eff9fe;
+  padding: 50px 0;
+  .title{
+    margin-bottom: 40px;
+  }
+  .text-box{
+    width: 1200px;
+    margin: 10px auto 0;
+    li{
+      width: 50%;
+      float: left;
+      text-align: center;
+    }
+    h5{
+      font-size: 30px;
+      color: $redColor;
+    }
+    p{
+      font-size: 32px;
+    }
+  }
+}
+.system-box{
+  padding: 50px 0;
+  width: 1200px;
+  margin: 0 auto;
+  li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    &:nth-child(1){ div{background-image: url(../../assets/images/investment/system1.png);} }
+    &:nth-child(2){ div{background-image: url(../../assets/images/investment/system2.png);} }
+    &:nth-child(3){ div{background-image: url(../../assets/images/investment/system3.png);} }
+    &:nth-child(4){ div{background-image: url(../../assets/images/investment/system4.png);} }
+    &:nth-child(5){ div{background-image: url(../../assets/images/investment/system5.png);} }
+    &:nth-child(6){ div{background-image: url(../../assets/images/investment/system6.png);} }
+    &:nth-child(7){ div{background-image: url(../../assets/images/investment/system7.png);} }
+    &:nth-child(8){ div{background-image: url(../../assets/images/investment/system8.png);} }
+    &.active, &:hover{
+      &:nth-child(1){ div{background-image: url(../../assets/images/investment/system1_active.png);} }
+      &:nth-child(2){ div{background-image: url(../../assets/images/investment/system2_active.png);} }
+      &:nth-child(3){ div{background-image: url(../../assets/images/investment/system3_active.png);} }
+      &:nth-child(4){ div{background-image: url(../../assets/images/investment/system4_active.png);} }
+      &:nth-child(5){ div{background-image: url(../../assets/images/investment/system5_active.png);} }
+      &:nth-child(6){ div{background-image: url(../../assets/images/investment/system6_active.png);} }
+      &:nth-child(7){ div{background-image: url(../../assets/images/investment/system7_active.png);} }
+      &:nth-child(8){ div{background-image: url(../../assets/images/investment/system8_active.png);} }
+      h6,p{
+        color: $blueColor;
+      }
+    }
+  }
+  div{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% auto;
+    height: 200px;
+  }
+  h6{
+    font-size: 18px;
+  }
+  p{
+    font-size: 14px;
+    color: #898a8a;
+    margin-top: 10px;
+  }
+}
+.pk-box{
+  padding: 50px 0;
+  background: #f9f9f9;
+  .pk-wrap{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  li{
+    float: left;
+  }
+  .pk-img{
+    padding: 140px 70px 0;
+  }
+  .pk-content{
+    width: 460px;
+    div{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    img{
+      vertical-align: middle;
+    }
+    p{
+      width: 430px;
+      border-radius: 10px;
+      position: relative;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      min-height: 70px;
+      &:after{
+        content: "1";
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        color: #fff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 24px;
+        position: absolute;
+        margin-top: -30px;
+        top: 50%;
+      }
+      &.text-one{
+        &:after{
+          content: "1";
+        }
+      }
+      &.text-two{
+        &:after{
+          content: "2";
+        }
+      }
+      &.text-three{
+        &:after{
+          content: "3";
+        }
+      }
+    }
+  }
+  .pk-name{
+    width: 130px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .pk-lf{
+    .pk-name{
+      background: $blueColor;
+      color: #fff;
+      margin-right: 20px;
+    }
+    p{
+      padding: 15px 60px 15px 30px;
+      background: $blueColor;
+      color: #fff;
+      &:after{
+        background: #7ecef4;
+        right: -30px;
+      }
+    }
+  }
+  .pk-rt{
+    .pk-name{
+      background: #dedede;
+      color: $minColor;
+      margin-left: 20px;
+    }
+    p{
+      padding: 15px 30px 15px 60px;
+      background: #efefef;
+      color: $minColor;
+      &:after{
+        background: #bfbfbf;
+        left: -30px;
+      }
+    }
+
+  }
+}
+@media (max-width:1199px){
+  .investment{
+    .title{
+      font-size: 16px;
+    }
+  }
+  .college-box{
+    padding: 40px 0;
+    .title{
+      margin-bottom: 30px;
+    }
+    img{
+      width: 80%;
+    }
+    .text-box{
+      width: 100%;
+      margin: 16px auto 0;
+      h5{
+        font-size: 14px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+  .system-box{
+    padding: 40px 0;
+    width: 100%;
+    li{
+      overflow: hidden;
+      width: 50%;
+    }
+    div{
+      background-size: 36% auto;
+      height: 100px;
+    }
+    h6{
+      font-size: 14px;
+      white-space: nowrap;
+      text-overflow: hidden;
+    }
+    p{
+      font-size: 12px;
+      margin-top: 0;
+      white-space: nowrap;
+      text-overflow: hidden;
+    }
+  }
+  .pk-box{
+    padding: 40px 0;
+    .pc-list{
+      margin-top: 20px;
+    }
+    .pk-wrap{
+      width: 100%;
+    }
+    .pk-img, .pk-rt{
+      display: none;
+    }
+    .pk-content{
+      width: 70%;
+      max-width: 320px;
+      margin: 0 auto;
+      img{
+        height: 36px;
+        display: none;
+      }
+      div{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p{
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        min-height: 70px;
+        font-size: 12px;
+        &:after{
+          content: "1";
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+          margin-top: -15px;
+          top: 50%;
+        }
+      }
+    }
+    .pk-name{
+      width: 50%;
+      height: 36px;
+      line-height: 36px;
+    }
+    .pk-lf{
+      float: none;
+      .pk-name{
+        margin-right: 0px;
+      }
+      p{
+        padding: 5px 5px 5px 15px;
+        &:after{
+          left: -15px;
+        }
+      }
+    }
+  }
+}
