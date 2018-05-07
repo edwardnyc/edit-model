@@ -1,8 +1,8 @@
 <template>
   <div class="foot">
     <div class="foot-pc">
-      <p class="copy">Copyright2017 Takecloud Inc.All Rights Reserved沪ICP备 17002272-1号</p>
-      <p class="company">上海微庚信息科技有限公司</p>
+      <p class="copy">中天网络信息有限公司-ICP备案：黑ICP备18000693号-1</p>
+      <p class="company">中天网络信息有限公司</p>
       <ul class="channle">
         <li>
           <img src="../../assets/images/weibo.png" alt="">
@@ -19,15 +19,15 @@
       <ul class="lf">
         <li>
           <img src="../../assets/images/mobile/foot-tel.png" alt="">
-          <span>10105188</span>
+          <span>150000</span>
         </li>
         <li>
           <img src="../../assets/images/mobile/foot-message.png" alt="">
-          <span>booke@weimbo.com</span>
+          <span>1147046772@qq.com</span>
         </li>
         <li>
           <img src="../../assets/images/mobile/foot-map.png" alt="">
-          <span>上海市宝山区258号微特大厦</span>
+          <span>哈尔滨市南岗区哈西万达写字楼1013</span>
         </li>
       </ul>
       <div  class="rt">

@@ -1,10 +1,10 @@
 <template>
   
 <el-dialog title="选择轮播样式" :visible.sync="showlunbo" :before-close="handleClose">
-    <div class="title-box">
+    <div class="title-box" style="transform:translateY(-20px);">
         <div v-for="(title_item,title_index) in title_arr" :key="title_index" class="title-item" :class="{'active': activeShow==title_index}" >
                 <div style="width:100%;height:100%;">
-                        <img :src="title_item.img" style="width:90%;height:70%;margin-top:11%;margin-left:5%;">   
+                        <img :src="title_item.img" style="width:94%;height:70%;margin-top:11%;margin-left:3%;">   
                     <label :for="title_index" @click="changeActive(title_index)">
                         <input :id="title_index" type="radio" value="0" name="chose">选项{{title_index}}
                         <i :class="{'i_active':activeShow==title_index}"></i>
@@ -66,6 +66,7 @@ export default {
     height: 200px;
     justify-content: space-around;
     .title-item{
+        background: #fafafa;
         width: 280px;
         height: 200px;
         border: 1px solid #EFEFEF;
@@ -94,7 +95,7 @@ export default {
                 padding: 5px;
                 border-radius: 50%;
                 // background: #3587FC;
-                top: 41.4%;
+                top: 36%;
                 left: 13.5%;
                 transform: translateX(-50%) translateY(-50%)
             }

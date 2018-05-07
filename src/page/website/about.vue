@@ -3,7 +3,7 @@
     <Head />
     <SwiperMain :imgUrl="aboutBanner"/>
     <div class="num-box">
-      <Titlesub title="了解东雅网络" subtitle="帮助全天下企业打造互联网营销、以务实、专业的态度，<br>依托强大的技术能力、线上线下推广能力、成功服务百万企业用户"/>
+      <Titlesub title="了解中天网络" subtitle="帮助全天下企业打造互联网营销、以务实、专业的态度，<br>依托强大的技术能力、线上线下推广能力、成功服务百万企业用户"/>
       <ul class="clear">
         <li>
           <h5>2000w+</h5>

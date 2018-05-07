@@ -47,10 +47,12 @@
                 <div class="material-box from-page" style="z-index:0;">
 
                     <div class="material-btn" style="background:#fff;">
-                                        <el-pagination  style="position:absolute;right:20px;top:-38px;"
+                    <el-pagination  style="position:absolute;right:20px;top:-38px;"
                                     small
                                     background
                                     layout="prev, pager, next"
+                                    :page-size='15'
+                                    @current-change="changeCurrentPage"
                                     :total="50">
                             </el-pagination>
                     <el-button size="small" @click="handleClose">取 消</el-button>
@@ -140,6 +142,42 @@
       },
     },
     methods: {
+      changeCurrentPage(val){
+            console.log(val);
+                 let params = {
+            _token: this.$store.state._token,
+            app_id: this.$store.state.app_id,
+            // group_id: this.$store.state.group_id,            
+            flie_type: 1,
+            page:val
+          }
+         axios({
+          method: 'post',
+          baseURL: baseurl,
+          url: `${url}user/shop/goodslist`,
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;',
+          },
+          data: qs.stringify(params)
+        }).then((res) => {
+          console.log(res.data.code);
+        if (res.status == 200) {
+            const data = res.data.data;
+            window.data=data;
+            this.getImgList.length=0;
+            [...data].forEach((item,index)=>{
+              if(!item){
+                return ;
+              }
+                this.getImgList.push({goods_name:item.goods_name,goods_price:item.goods_price,goods_origin_price:item.goods_origin_price,check:false,src:`${this.$store.state.qiniu}/${item.goods_cover}`,goods_id:item.goods_id})
+            })
+                  // console.log(this.rootlist);            
+          // console.log(res);
+        } else {
+
+          }
+        });
+      },
       handleClose() {
         this.dialogVisible = false;
         this.$emit('close');
@@ -227,11 +265,12 @@
           console.log(res.data.code);
         if (res.status == 200) {
             const data = res.data.data;
+            window.data=data;
             [...data].forEach((item,index)=>{
               if(!item){
                 return ;
               }
-                this.getImgList.push({goods_name:item.goods_name,goods_price:item.goods_price,goods_origin_price:item.goods_origin_price,check:false,src:`${this.$store.state.qiniu}/${item.goods_cover}`})
+                this.getImgList.push({goods_name:item.goods_name,goods_price:item.goods_price,goods_origin_price:item.goods_origin_price,check:false,src:`${this.$store.state.qiniu}/${item.goods_cover}`,goods_id:item.goods_id})
             })
                   // console.log(this.rootlist);            
           // console.log(res);

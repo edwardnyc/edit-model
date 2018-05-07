@@ -34,7 +34,7 @@
         <div class="content">
           <div class="imgs" v-for="(item,index) in imgList" @click="selectImg(index)" :key="index">
             <span class="del-img"><big>x</big></span>
-            <img :src="$store.state.qiniu+ '/' + item.file_path" alt="" :class="{ 'currentImg' : currentImgIndex === index}">
+            <img :src="$store.state.qiniu+ '/' + item.file_path" alt="" style="height:100%;" :class="{ 'currentImg' : currentImgIndex === index}">
           </div>
         </div>
         <div class="material-btn">
@@ -68,8 +68,6 @@
         imgList: [],
         currentImgIndex: 0,
         headers:{
-          'Content-Type':'multipart/form-data', 
-          // 'Authorization': this.$store.state._token,
         },
         rootlist:[]
       };
@@ -113,32 +111,38 @@
         })
       },
       handleSuccess(res) {
-        let params = {
-            _token: this.$store.state._token,
-            app_id: this.$store.state.app_id,
-            group_id: this.$store.state.group_id,            
-            flie_type: 1,
-          }
-         axios({
-          method: 'post',
-          baseURL: baseurl,
-          url: `${url}/user/upload.upload/getlist`,
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded;',
-          },
-          data: qs.stringify(params)
-        }).then((res) => {
-          console.log(res);
-        if (res.data.data.code == 200) {
-            this.$message('上传成功');
-            this.getImgList();
-          console.log(res);
-        } else {
-            this.$message.error(res.data.message);
-          }
+        // let params = {
+        //     _token: this.$store.state._token,
+        //     app_id: this.$store.state.app_id,
+        //     group_id: this.$store.state.group_id,            
+        //     flie_type: 1,
+        //   }
+        //  axios({
+        //   method: 'post',
+        //   baseURL: baseurl,
+        //   url: `${url}/user/upload.upload/getlist`,
+        //   headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded;',
+        //   },
+        //   data: qs.stringify(params)
+        // }).then((res) => {
+        //   console.log(res);
+        // if (res.data.data.code == 200) {
+        //     this.$message('上传成功');
+        //     this.getImgList();
+        //   console.log(res);
+        // } else {
+        //     this.$message.error(res.data.message);
+        //   }
+        // });
+         this.$message({
+          message: '上传成功',
+          type: 'success'
         });
+        this.geilistHandle(this.group_id);
       },
       beforeUpload(file) {
+        console.log(file);
         const isJPG = file.type === 'image/jpeg';
         const isPNG = file.type === 'image/png';
         const isLt2M = file.size / 1024 / 1024 < 2;

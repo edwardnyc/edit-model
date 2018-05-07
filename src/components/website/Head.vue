@@ -51,7 +51,7 @@
       return {
         mobileSlide: false,
         routeArr: [
-          {title: '微盟', routeName: 'league'},
+          {title: '中天', routeName: 'league'},
           {title: '代理商', routeName: 'agent'},
           {title: '模板', routeName: 'template'},
           {title: '招商加盟', routeName: 'investment'},

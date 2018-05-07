@@ -176,8 +176,10 @@
                     obj.money = item.stock;
                     obj.offer = item.discount;
                     obj.key= index;
-                    obj.time1 =  timestampToTime(item.apply_time.time.start),
-                    obj.time2=timestampToTime(item.apply_time.time.end);
+                    // obj.time1 =  timestampToTime(item.apply_time.time.start),
+                    obj.time1 =  timestampToTime(item.apply_start_time),
+                    // obj.time2=timestampToTime(item.apply_time.time.end);
+                    obj.time2=timestampToTime(item.apply_end_time);
                     obj.id=item.id
                     obj.type=  item.coupon_type=="full_cut"?'满减劵':'折扣劵';
                     obj.name = item.name;

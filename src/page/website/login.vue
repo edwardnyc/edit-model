@@ -70,15 +70,15 @@ export default {
          this.$message({
             message: '请输入正确手机号',
             type: 'error'
-          }) 
-          return 
+          })
+          return
       }
       if(params.password.length < 6 || params.password.length> 18){
          this.$message({
             message: '请输入密码',
             type: 'error'
-          }) 
-          return 
+          })
+          return
       }
       this.$store.dispatch('login', params).then(res => {
         const { code, data, msg,} = res.data
@@ -88,10 +88,10 @@ export default {
             type: 'success'
           })
           this.setCookie('qiniu', data.qiniu_host)
-          this.$store.commit('qiniu', data.qiniu_host)          
+          this.$store.commit('qiniu', data.qiniu_host)
           this.setCookie('_token', data.id)
           this.$store.commit('_token',  data.id)
-          this.$router.push({ name: 'league'})      
+          this.$router.push({ name: 'league'})
         } else {
           this.$message({
             message: msg,

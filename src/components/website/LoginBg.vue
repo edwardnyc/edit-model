@@ -1,7 +1,7 @@
 <template>
   <div class="loginbg">
     <ul>
-      <li><router-link :to="{ name: 'league'}" exact tag="a">微盟</router-link></li>
+      <li><router-link :to="{ name: 'league'}" exact tag="a">中天</router-link></li>
       <li><router-link :to="{ name: 'agent'}" exact tag="a">代理商</router-link></li>
       <li><router-link :to="{ name: 'template'}" exact tag="a">模板</router-link></li>
       <li><router-link :to="{ name: 'investment'}" exact tag="a">招商加盟</router-link></li>

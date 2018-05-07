@@ -64,6 +64,7 @@ export default {
     height: 200px;
     justify-content: space-between;
     .title-item{
+        background: #fafafa;
         width: 260px;
         height: 100%;
         border: 1px solid rgba(grey,0.4);
@@ -90,8 +91,8 @@ export default {
                 padding: 5px;
                 border-radius: 50%;
                 // background: #3587FC;
-                top: 41.4%;
-                left: 13.5%;
+                top: 35.9%;
+                left: 14.52%;
                 transform: translateX(-50%) translateY(-50%)
             }
         }

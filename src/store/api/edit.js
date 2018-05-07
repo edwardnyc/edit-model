@@ -29,7 +29,7 @@ export default {
             return request.post(`${url}/admin/crud/getone`, obj);
         },
         releaselist({}, obj) {
-            return request.post(`${url}/wechat/authorize/push`, obj);
+            return request.post(`${url}/wechat/authorize/shop_push`, obj);
         },
         release({}, obj) {
             return request.post(`${url}/wechat/authorize/push`, obj);

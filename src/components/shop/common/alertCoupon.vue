@@ -18,100 +18,101 @@
   </div>
 </el-dialog>
 </template>
-<script> 
+<script>
 export default {
-  name :'chooseTitle',
-    data(){
-        return{
-                title_arr: [require('../../../assets/images/shop/alert/coupon1.png'),require('../../../assets/images/shop/alert/coupon2.png')],
-                activeShow:0,
-                chooseSync: this.showShopHead
-        }
+  name: "chooseTitle",
+  data() {
+    return {
+      title_arr: [
+        require("../../../assets/images/shop/alert/coupon1.png"),
+        require("../../../assets/images/shop/alert/coupon2.png")
+      ],
+      activeShow: 0,
+      chooseSync: this.showShopHead
+    };
+  },
+  props: {
+    showShopHead: {
+      default: false
+    }
+  },
+  methods: {
+    changeActive(i) {
+      this.activeShow = i;
     },
-    props:{
-       showShopHead:{
-           default :false
-       }
+    parentRet() {
+      this.$emit("changeShopHead", this.activeShow);
     },
-    methods:{
-        changeActive(i){
-                this.activeShow = i;
-        },
-        parentRet(){
-            this.$emit('changeShopHead',this.activeShow)
-        },
-        closehandle(){
-            this.$emit('changeShopHead')
-        }
+    closehandle() {
+      this.$emit("changeShopHead");
+    }
 
     //     cancel(){
     //         this.$emit('titleChange',this.activeShow)        }
     // }
-    },
-            watch:{
-            // chooseSync(){
-            //     this.$emit()
-            // }
-        },
-
-}
+  },
+  watch: {
+    // chooseSync(){
+    //     this.$emit()
+    // }
+  }
+};
 </script>
 <style lang="scss" scoped>
-          .i_active{
-                background: #3587FC;
-            }
-.title-box{
-    display: flex;
-    height: 200px;
-    justify-content: space-between;
-    .title-item{
-        width: 260px;
-        height: 100%;
-        border: 1px solid rgba(grey,0.4);
-        position: relative;
-        label{
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            input{
-                border: 1px solid#3587FC !important;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                &:checked{
-                    // background: red;
-                }
-            }
-            // input:checked+i{
-            //     background: #3587FC;
-            // }
-            i{
-                position: absolute;
-                padding: 5px;
-                border-radius: 50%;
-                // background: #3587FC;
-                top: 41.4%;
-                left: 13.5%;
-                transform: translateX(-50%) translateY(-50%)
-            }
+.i_active {
+  background: #3587fc;
+}
+.title-box {
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+  .title-item {
+    width: 260px;
+    height: 100%;
+    border: 1px solid rgba(grey, 0.4);
+    position: relative;
+    label {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      input {
+        border: 1px solid#3587FC !important;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        &:checked {
+          // background: red;
         }
-
+      }
+      // input:checked+i{
+      //     background: #3587FC;
+      // }
+      i {
+        position: absolute;
+        padding: 5px;
+        border-radius: 50%;
+        // background: #3587FC;
+        top: 36%;
+        left: 13.5%;
+        transform: translateX(-50%) translateY(-50%);
+      }
     }
+  }
 }
-.active{
-    // &>div{
-    //     border: 1px solid #3587FC;
-    // }
-    border : 1px solid #3587FC !important;
-    &>input{
-         background:  #3587FC;
-    }
+.active {
+  // &>div{
+  //     border: 1px solid #3587FC;
+  // }
+  border: 1px solid #3587fc !important;
+  & > input {
+    background: #3587fc;
+  }
 }
-.img0{
-    margin-top: 80px !important;
+.img0 {
+  margin-top: 80px !important;
 }
-.img1{
-    margin-top:65px !important;
+.img1 {
+  margin-top: 65px !important;
 }
 </style>

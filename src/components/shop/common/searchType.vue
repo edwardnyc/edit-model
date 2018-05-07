@@ -65,6 +65,7 @@ export default {
     flex-wrap: wrap;
     // justify-content: space-around;
     .title-item{
+        background: #fafafa;
         width: 30%;
         margin-left:30px;
         margin-top:10px;
@@ -80,6 +81,8 @@ export default {
             input{
                 border: 1px solid#3587FC !important;
                 width: 15px;
+                vertical-align: middle;
+                margin-top: -3px;                
                 height: 15px;
                 border-radius: 50%;
                 &:checked{
@@ -94,7 +97,7 @@ export default {
                 padding: 5px;
                 border-radius: 50%;
                 // background: #3587FC;
-                top: 41.4%;
+                top: 45%;
                 left: 13.5%;
                 transform: translateX(-50%) translateY(-50%)
             }

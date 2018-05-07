@@ -2,28 +2,28 @@
   <div class="el-main level-two">
     <div class="route-left">
       <el-menu
-        default-active="2"
+        default-active="1"
         text-color="#333"
         background-color="#f7f7f7"
         active-text-color="#1DA2C8"
         :router="isRoute"
         v-if="isAuth"
       >
-        <el-menu-item index="1" route="/wxchat">
-          <span slot="title">小程序</span>
+        <el-menu-item index="1" route="/wxchat" @click="changeRoute('wxchat')">
+          <span slot="title">授权</span>
         </el-menu-item>
-        <el-menu-item index="2" route="/wxchat">
-          <span slot="title">小程序管理</span>
+        <el-menu-item index="2" route="/root" @click="changeRoute('root')">
+          <span slot="title">预览</span>
         </el-menu-item>
-        <el-menu-item index="3" route="/wxchat">
-          <span slot="title">公众号</span>
+        <el-menu-item index="3" route="/fabu" @click="changeRoute('fabu')">
+          <span slot="title">发布</span>
         </el-menu-item>
-        <el-menu-item index="4" route="/wxchat">
-          <span slot="title">自动回复</span>
+        <el-menu-item index="4" route="/huifu"  @click="changeRoute('huifu')">
+          <span slot="title">上线</span>
         </el-menu-item>
-        <el-menu-item index="5" route="/wxchat">
-          <span slot="title">公众号管理</span>
-        </el-menu-item>
+        <!--<el-menu-item index="5" route="/wxchat" @click="changeRoute('wxchat')">-->
+          <!--<span slot="title">公众号管理</span>-->
+        <!--</el-menu-item>-->
       </el-menu>
 
       <el-menu
@@ -47,7 +47,7 @@
         <WechatBoard v-if="isAuth" />
         <WechatSuccess v-else />
       </div>
-      <!-- <router-view></router-view> -->
+       <!--<router-view></router-view>-->
     </div>
   </div>
 </template>
@@ -72,34 +72,41 @@ export default {
     }
   },
   methods: {
-    
+    changeRoute(index){
+      // console.log(index)
+      this.name = index;
+      console.log(this.name);
+
+      // const i = index.split('-')[1];
+    }
   },
   created () {
-    console.log(123);
+
     const query = this.$route.query
     const params = {
       u_token: this.$store.state._token,
       app_id: this.$store.state.app_id,
       auth_code: query.auth_code
     }
+    console.log(this.$route);
     if (!query.auth_code) return false;
     let self = this
     this.$store.dispatch('huitiao', params).then(res => {
       const { code, message } = res.data
-      if (+code == 200) {
-        this.$message({
-          message: '授权成功',
-          type: 'success',
-          // onClose () {
-          //   window.location.href = '/wxchat'
-          // }
-        })
-      } else {
-        this.$message({
-          message: '授权失败',
-          type: 'error'
-        })
-      }
+      // if (+code == 200) {
+      //   this.$message({
+      //     message: '授权成功',
+      //     type: 'success',
+      //     // onClose () {
+      //     //   window.location.href = '/wxchat'
+      //     // }
+      //   })
+      // } else {
+      //   this.$message({
+      //     message: '授权失败',
+      //     type: 'error'
+      //   })
+      // }
     })
   }
 }
@@ -201,7 +208,7 @@ export default {
   // border: none;
   // color: #fff;
   // &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  //     color: #fff; opacity:1; 
+  //     color: #fff; opacity:1;
   // }
 
   // &::-moz-placeholder { /* Mozilla Firefox 19+ */

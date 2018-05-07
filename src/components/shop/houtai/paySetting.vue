@@ -1,20 +1,20 @@
 <template>
   <div>
-    <div v-if="name==='zhifu'">
+    <div v-if="name==='zhifu'" >
       <div style="width:80px;height:30px; margin:15px 0;font-weight:bold;">支付设置</div>
       <el-col :span="24" style=" height:680px;background:#f2f1f6; padding:30px 0 0 167px;  border-radius:5px;">
         <el-form ref="form" :model="form" label-width="180px" style='max-width:800px; min-width:400px;'>
           <el-form-item  label="appid" prop="input1">
-            <el-input v-model="form.input1"></el-input>
+            <el-input v-model="form.input1" placeholder="请输入appid"></el-input>
           </el-form-item>
           <el-form-item label="appsecret" prop="input2">
-            <el-input v-model="form.input2"></el-input>
+            <el-input v-model="form.input2" placeholder="请输入app密码"></el-input>
           </el-form-item>
-          <el-form-item label="商户ID" prop="input3">
-            <el-input v-model="form.input3" ></el-input>
+          <el-form-item label="商户ID" prop="input3" >
+            <el-input v-model="form.input3"  placeholder="请输入商户id"></el-input>
           </el-form-item>
           <el-form-item label="商户秘钥" prop="input4">
-            <el-input v-model="form.input4" ></el-input>
+            <el-input v-model="form.input4" placeholder="请输入商户秘钥" ></el-input>
           </el-form-item>
           <el-form-item label="支付证书pem格式" prop="input5">
             <el-button type="primary" @click="chufa('upload_file0')" style="background-color:#fff;color: black;border: 1px solid #cccccc">上传</el-button>
@@ -35,9 +35,10 @@
   </div>
 </template>
 <script>
+  // import qs from "qs"
   import axios from "axios"
   import config from '../../../store/config'
-  const apiHost= config.proxy.apiHost;
+  const url = config.proxy.apiHost;
   export default {
 
     data(){
@@ -83,7 +84,7 @@
         shuju.append('peminputs',this.form.input6);
         // console.log(this.$store.state._token);
         shuju.append('_token', this.$store.state._token);
-        axios.post(`/api/user/Useconfig/add`, shuju, {
+        axios.post(`http://api.ztwlxx.club/user/Useconfig/add`, shuju, {
           headers:{'Content-Type':'multipart/form-data'}
         }).then(res => {
          if (res.data.code === 200) {

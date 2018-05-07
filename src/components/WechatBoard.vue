@@ -1,12 +1,21 @@
+<!--授权界面-->
 <template>
   <div class="board">
-    <div class="board-box overview-shadow">
-      <p class="board-title"><span>小程序设置</span></p>
-      <div class="grid-content bg-purple grid-rt">
+    <div class="board-box overview-shadow ">
+      <p class="board-title" style="text-align: left"><span>微信授权</span></p>
+      <div class="jindu" style="width: 80%;margin: 0 auto;">
+        <el-steps :active="1" style="text-align: left">
+          <el-step title="授权" icon=""></el-step>
+          <el-step title="预览" icon=""></el-step>
+          <el-step title="发布" icon=""></el-step>
+          <el-step title="上线" icon=""></el-step>
+        </el-steps>
+      </div>
+      <div class="grid-content bg-purple grid-rt" style="padding-top: 50px;padding-bottom: 20px">
         <dl>
           <dt style="font-family: PingFangSC-Semibold;color: #001529;">授权说明</dt>
-          <dd>1、一个微信小程序仅可授权给一个微盟商户（如小店、客来店、智店等）；</dd>
-          <dd>2、位保证所有功能的正常使用，授权时请保持默认选择，把权限统一授权给微盟；</dd>
+          <dd>1、一个微信小程序仅可授权给一个中天商户（如小店、客来店、智店等）；</dd>
+          <dd>2、位保证所有功能的正常使用，授权时请保持默认选择，把权限统一授权给中天；</dd>
           <dd>3、新授权的小程序需与已授权的小程序及公众号主体一致；</dd>
           <dd>4、您在该入口授权的公众账号类型为小程序，请在授权页面正确选择。</dd>
         </dl>
@@ -17,10 +26,10 @@
         </dl>
       </div>
     </div>
-    <div class="board-box overview-shadow sign-wechat">
+    <div class="board-box overview-shadow sign-wechat weishouquan">
       <div class="process-box">
         <p class="process-title">暂未授权</p>
-        <div class="btn-submit" @click="submitFn">提交</div>
+        <div class="btn-submit" @click="submitFn">授权</div>
         <!-- <el-button type="primary" >提交</el-button> -->
         <div class="process-notice">未注册小程序，<span>立即申请</span></div>
       </div>
@@ -36,8 +45,8 @@
           <div class="grid-content bg-purple grid-rt" style="text-align: left;">
             <dl>
               <dt>授权说明</dt>
-              <dd>1、一个微信小程序仅可授权给一个微盟商户（如小店、客来店、智店等）；</dd>
-              <dd>2、位保证所有功能的正常使用，授权时请保持默认选择，把权限统一授权给微盟；</dd>
+              <dd>1、一个微信小程序仅可授权给一个中天商户（如小店、客来店、智店等）；</dd>
+              <dd>2、位保证所有功能的正常使用，授权时请保持默认选择，把权限统一授权给中天；</dd>
               <dd>3、新授权的小程序需与已授权的小程序及公众号主体一致；</dd>
               <dd>4、您在该入口授权的公众账号类型为小程序，请在授权页面正确选择。</dd>
             </dl>
@@ -54,14 +63,16 @@
             </div>
           </div>
         </el-col>
-        
+
       </el-row> -->
     </div>
+
   </div>
 </template>
 
 <script>
   export default {
+    name:"wxchat",
     data () {
       return {
         // _token: this.$store.state._token,
@@ -74,11 +85,11 @@
         const params = {
           app_id: this.$store.state.app_id,
           u_token: this.$store.state._token
-        }
+        };
         this.$store.dispatch('auth', params).then(res => {
-          
+
           const code = res.data.code;
-          const url = res.data.data.url;          
+          const url = res.data.data.url;
           if (+code == 200) {
             this.$message({
               message: '即将进入授权界面',
@@ -100,6 +111,7 @@
   border-right: none;
 }
 .board{
+  background-color: #f2f1f6;
   // border: 1px solid #dcdcdc;
   // padding: 80px;
   font-size: 12px;
@@ -114,7 +126,7 @@
   }
   .board-box{
     margin-bottom: 10px;
-    padding: 80px;
+    padding: 20px;
     background: #fff;
     &.board-box-active{
       .board-title span{
@@ -126,6 +138,7 @@
     }
   }
   .grid-rt{
+    text-align: center;
     dd{
       padding: 5px 0;
     }
@@ -159,4 +172,10 @@
 .sign-wechat {
   text-align: center;
 }
+input.el-input__inner {
+  border: 0;outline:none;cursor: pointer
+}
+.clearfix:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+
+.clearfix { *zoom:1; }
 </style>

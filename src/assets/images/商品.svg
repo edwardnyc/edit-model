@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>商品</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Apple-TV" transform="translate(-248.000000, -138.000000)" stroke="#FFFFFF">
+            <g id="Group-14" transform="translate(158.000000, 75.000000)">
+                <g id="左侧按钮2" transform="translate(90.000000, 0.000000)">
+                    <g id="商品" transform="translate(1.000000, 64.000000)">
+                        <path d="M6,0 L8.5,0 C8.77614237,0 9,0.201471863 9,0.45 L9,8.55 C9,8.79852814 8.77614237,9 8.5,9 L0.5,9 C0.223857625,9 0,8.79852814 0,8.55 L0,0.45 C0,0.201471863 0.223857625,0 0.5,0 L3,0" id="Rectangle-5" fill="#909196"></path>
+                        <path d="M3.38382788,2.06056078 C3.14518957,2.32618867 3,2.67746821 3,3.0626586 C3,3.89108573 3.67157288,4.5626586 4.5,4.5626586 C5.32842712,4.5626586 6,3.89108573 6,3.0626586 C6,2.64742759 5.83128096,2.27160301 5.55865799,2" id="Oval-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

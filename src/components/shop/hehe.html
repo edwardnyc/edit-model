@@ -28,6 +28,19 @@
         <div class="child">3</div>
         <div class="child">4</div>
     </div>
+    <script>
+        var sss = {
+            'love': 'nyc'
+        };
+
+        function deepClone(sss) {
+            const obj = new Object();
+            Object.keys(sss).forEach((item) => {
+                obj[item] = Object.getOwnPropertyDescriptor(sss, item);
+            });
+            return obj;
+        }
+    </script>
 </head>
 
 <body>

@@ -1,10 +1,10 @@
 <template>
   
 <el-dialog title="选择店铺样式" :visible.sync="showShopHead" :before-close="closehandle" width=600px>
-    <div class="title-box">
+    <div class="title-box" style="transform:translateY(-20px);">
         <div v-for="(title_item,title_index) in title_arr" :key="title_index" class="title-item" :class="{'active': activeShow==title_index}" >
                 <div style="overflow:hidden;">
-                     <img :src="title_item" style="width:100%;margin-top:50%;" :class="'img'+title_index">   
+                     <img :src="title_item" style="width:94%;margin-top:50%;margin-left:3%;" :class="'img'+title_index">   
                     <label :for="title_index" @click="changeActive(title_index)">
                         <input :id="title_index" type="radio" value="0" name="chose">选项{{title_index}}
                         <i :class="{'i_active':activeShow==title_index}"></i>
@@ -23,7 +23,7 @@ export default {
   name :'chooseTitle',
     data(){
         return{
-                title_arr: [require('../../../assets/images/shop/showhead1.png'),require('../../../assets/images/shop/showhead2.png')],
+                title_arr: [require('../../../assets/images/shop/alert/shopHead1.png'),require('../../../assets/images/shop/alert/shopHead0.png')],
                 activeShow:0,
                 chooseSync: this.showShopHead
         }
@@ -69,6 +69,7 @@ export default {
         height: 100%;
         border: 1px solid rgba(grey,0.4);
         position: relative;
+         background: #fafafa;
         label{
             position: absolute;
             bottom: -35px;
@@ -91,13 +92,16 @@ export default {
                 padding: 5px;
                 border-radius: 50%;
                 // background: #3587FC;
-                top: 41.4%;
+                top: 36%;
                 left: 13.5%;
                 transform: translateX(-50%) translateY(-50%)
             }
         }
 
     }
+}
+label{
+    // font-size: 12px !important;
 }
 .active{
     // &>div{
@@ -109,9 +113,9 @@ export default {
     }
 }
 .img0{
-    margin-top: 85px !important;
+    margin-top: 15px !important;
 }
 .img1{
-    margin-top:38px !important;
+    margin-top:75px !important;
 }
 </style>

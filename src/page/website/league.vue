@@ -47,13 +47,13 @@
           <img src="../../assets/images/league/logoz.png" class="lf">
           <div class="network lf">
             <h1>中天网络</h1>
-            <p>www.baidu.com</p>
+            <p>www.ztwlxx.club</p>
           </div>
           <h5  class="lf">小程序生成平台</h5>
         </div>
         <h6>现诚招各区域代理商加盟</h6>
         <p class="text">电话：400-005-9966</p>
-        <p class="text">地址：河南省郑州市郑东新区绿地新都会2号楼A座18层</p>
+        <p class="text">地址：哈尔滨市南岗区哈西万达写字楼1013室</p>
       </div>
       <div class="map-rt rt">
         <img src="../../assets/images/league/map.png" alt="">

@@ -18,90 +18,94 @@
   </div>
 </el-dialog>
 </template>
-<script> 
+<script>
 export default {
-  name :'chooseTitle',
-    data(){
-        return{
-                title_arr: [require('../../../assets/images/shop/title1.png'),require('../../../assets/images/shop/title2.png'),require('../../../assets/images/shop/title3.png')],
-                activeShow:0,
-                chooseSync: this.showTitle
-        }
+  name: "chooseTitle",
+  data() {
+    return {
+      title_arr: [
+        require("../../../assets/images/shop/title1.png"),
+        require("../../../assets/images/shop/title2.png"),
+        require("../../../assets/images/shop/title3.png")
+      ],
+      activeShow: 0,
+      chooseSync: this.showTitle
+    };
+  },
+  props: {
+    showTitle: {
+      default: false
+    }
+  },
+  methods: {
+    changeActive(i) {
+      this.activeShow = i;
     },
-    props:{
-       showTitle:{
-           default :false
-       }
-    },
-    methods:{
-        changeActive(i){
-                this.activeShow = i;
-        },
-        parentRet(){
-            this.$emit('titleChange',this.activeShow)
-        },
+    parentRet() {
+      this.$emit("titleChange", this.activeShow);
+    }
 
     //     cancel(){
     //         this.$emit('titleChange',this.activeShow)        }
     // }
-    },
-            watch:{
-            // chooseSync(){
-            //     this.$emit()
-            // }
-        }
-}
+  },
+  watch: {
+    // chooseSync(){
+    //     this.$emit()
+    // }
+  }
+};
 </script>
 <style lang="scss" scoped>
-          .i_active{
-                background: #3587FC;
-            }
-.title-box{
-    display: flex;
-    height: 200px;
-    justify-content: space-between;
-    .title-item{
-        width: 30%;
-        height: 100%;
-        border: 1px solid rgba(grey,0.4);
-        position: relative;
-        label{
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            input{
-                border: 1px solid#3587FC !important;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                &:checked{
-                    // background: red;
-                }
-            }
-            // input:checked+i{
-            //     background: #3587FC;
-            // }
-            i{
-                position: absolute;
-                padding: 5px;
-                border-radius: 50%;
-                // background: #3587FC;
-                top: 41.4%;
-                left: 13.5%;
-                transform: translateX(-50%) translateY(-50%)
-            }
-        }
-
-    }
+.i_active {
+  background: #3587fc;
 }
-.active{
-    // &>div{
-    //     border: 1px solid #3587FC;
-    // }
-    border : 1px solid #3587FC !important;
-    &>input{
-         background:  #3587FC;
+.title-box {
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+  .title-item {
+    width: 30%;
+    height: 100%;
+    border: 1px solid rgba(grey, 0.4);
+    position: relative;
+    background: #fafafa;
+    label {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      input {
+        border: 1px solid#3587FC !important;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        &:checked {
+          // background: red;
+        }
+      }
+      // input:checked+i{
+      //     background: #3587FC;
+      // }
+      i {
+        position: absolute;
+        padding: 5px;
+        border-radius: 50%;
+        // background: #3587FC;
+        top: 36%;
+        left: 13.5%;
+        transform: translateX(-50%) translateY(-50%);
+      }
     }
+  }
+}
+.active {
+  // &>div{
+  //     border: 1px solid #3587FC;
+  // }
+  border: 1px solid #3587fc !important;
+  & > input {
+    background: #3587fc;
+  }
 }
 </style>

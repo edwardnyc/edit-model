@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/page/home'
 const overviewPage = r => require.ensure([], () => r(require('../page/overview.vue')), 'overviewPage');
+const rootPage = r => require.ensure([], () => r(require('../page/root.vue')), 'rootPage');
+const huifuPage = r => require.ensure([], () => r(require('../page/huifu.vue')), 'huifuPage');
+const fabuPage = r => require.ensure([], () => r(require('../page/fabu.vue')), 'fabuPage');
 const wechatPage = r => require.ensure([], () => r(require('../page/wechat.vue')), 'wechatPage');
 const marketPage = r => require.ensure([], () => r(require('../page/market.vue')), 'marketPage');
 // const formPage = r => require.ensure([], () => r(require('../page/form.vue')), 'formPage');
@@ -26,7 +29,10 @@ const backstage = r => require.ensure([], () => r(require('../components/shop/ho
 const backstage1 = r => require.ensure([], () => r(require('../components/shop/houtai/houtai1')), 'houtai1');
 // const getBackstage = pageName => resolve => require(['../components/shop/houtai'], page => resolve(page[pageName]));
 const houtai1 = r => require.ensure([], () => r(require('../components/shop/houtai/houtai1.vue')), 'houtai1');
-Vue.use(Router)
+const backstage2 = r => require.ensure([], () => r(require('../components/shop/shangpin/backstage.vue')), 'backstage');
+const backstage3 = r => require.ensure([], () => r(require('../components/shop/shangpin/shangpin1')), 'shangpin1');
+const shangpin1 = r => require.ensure([], () => r(require('../components/shop/shangpin/shangpin1.vue')), 'shangpin1');
+Vue.use(Router);
 
 export default new Router({
     mode: 'history',
@@ -40,20 +46,35 @@ export default new Router({
             path: '/',
             component: home,
             children: [{
-                    path: 'overview',
+                    path: '/overview',
                     name: 'overview',
                     component: overviewPage
                 },
                 {
-                    path: 'form',
+                    path: '/form',
                     name: 'form',
                     component: formPage
                 },
                 {
-                    path: 'wxchat',
+                    path: '/wxchat',
                     name: 'wechat',
                     component: wechatPage
                 },
+              {
+                path: '/root',
+                name: 'root',
+                component: rootPage
+              },
+              {
+                path: '/fabu',
+                name: 'fabu',
+                component: fabuPage
+              },
+              {
+                path: '/huifu',
+                name: 'huifu',
+                component: huifuPage
+              },
                 {
                     path: 'market',
                     component: marketPage,
@@ -83,6 +104,15 @@ export default new Router({
                         name: 'houtai1',
                     }]
                 },
+              {
+                path: 'backstage',
+                component: backstage2,
+                children: [{
+                  path: 'shangpin1',
+                  component: backstage3,
+                  name: 'shangpin1',
+                }]
+              },
             ],
         },
         {

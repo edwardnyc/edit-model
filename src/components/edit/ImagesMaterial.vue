@@ -16,7 +16,7 @@
             :on-success="handleSuccess"
             :before-upload="beforeUpload"
             :headers="headers"
-            :data="{
+            :data="{   
               group_id: group_id,
               _token:$store.state._token,
               app_id: $store.state.app_id,

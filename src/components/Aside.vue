@@ -161,11 +161,12 @@ aside {
         let items = [
           { name: 'overview', path:'/overview',icon: require('@/assets/images/gaikuang.png'), title: '概述' },
           { name: 'editor', path:'/market/shop',icon: require('@/assets/images/fixstore.png'), title: '装修' },
+          { name: 'shangpin1', path:'/backstage/shangpin1',icon: require('@/assets/images/商品.svg'), title: '商品' },
           { name: 'form', path:'/form',icon: require('@/assets/images/form.png'), title: '表单' },
           { name: 'market1', path:'/market/page2', icon: require('@/assets/images/sale.png'), title: '营销' },
-          { name: 'wechat', path:'/wxchat',icon: require('@/assets/images/wechat.png'), title: '微信' },
-          {name :'',path:'/backstage/houtai1',icon :require('@/assets/images/shezhi.svg'),title:'设置'}
-        ]
+          { name: 'wxchat', path:'/wxchat',icon: require('@/assets/images/wechat.png'), title: '微信' },
+          {name :'shezhi',path:'/backstage/houtai1',icon :require('@/assets/images/设置.svg'),title:'设置'}
+        ];
         // let path = this.$route.path
         // let reg = /^\/edit\//
         // if (reg.test(path)) {
